@@ -1,32 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:padding="16dp">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+    <TextView
+        android:id="@+id/tvFlashcard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Flashcard Question"
+        android:textSize="24sp"
+        android:textColor="#000"
+        android:gravity="center"
+        android:padding="24dp"
+        android:background="#FFFFFF"
+        android:elevation="4dp" />
 
-        <TextView
-            android:id="@+id/flashcardText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Flashcard Question"
-            android:textSize="24sp"
-            android:gravity="center"
-            android:padding="32dp"
-            android:clickable="true" />
+    <Button
+        android:id="@+id/btnFlip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Flip"
+        android:layout_below="@id/tvFlashcard"
+        android:layout_marginTop="16dp"
+        android:layout_centerHorizontal="true"/>
 
-        <Button
-            android:id="@+id/markAsKnownButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Mark as Known"
-            android:layout_centerHorizontal="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="16dp"/>
-    </RelativeLayout>
+    <Button
+        android:id="@+id/btnShuffle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Shuffle"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"/>
 
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+        android:id="@+id/btnMarkKnown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mark as Known"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"/>
+</RelativeLayout>
