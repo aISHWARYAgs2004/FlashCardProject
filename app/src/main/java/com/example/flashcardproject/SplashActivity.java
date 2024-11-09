@@ -6,6 +6,8 @@ import android.os.Handler;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class SplashActivity extends AppCompatActivity {
+    private static final int SPLASH_SCREEN_DELAY = 2000; // 2 seconds
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -14,8 +16,10 @@ public class SplashActivity extends AppCompatActivity {
         new Handler().postDelayed(() -> {
             Intent intent = new Intent(SplashActivity.this, MainActivity.class);
             startActivity(intent);
-            finish();
-        }, 2000); // 2 seconds delay
+            finish(); // Ensure SplashScreenActivity is closed
+        }, SPLASH_SCREEN_DELAY);
     }
 }
+
+
 
